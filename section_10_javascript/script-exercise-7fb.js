@@ -14,15 +14,34 @@ var database = [user]
 // 3. Create an array called "newsfeed" which contains 3 objects with properties "username" and "timeline".
 var newsfeed = [
   {
-    username: '',
-    timeline: ''
+    username: 'Neil',
+    timeline: 'Fresh post!'
   },
   {
-    username: '',
-    timeline: ''
+    username: 'Alex',
+    timeline: "I'm online!!"
   },
   {
-    username: '',
-    timeline: ''
+    username: 'Ron',
+    timeline: 'I. Ron Butterfly!!!'
   }
 ]
+
+var usernamePrompt = prompt('Whats your username?')
+var passwordPrompt = prompt('Whats your password?')
+
+function signIn (username, password) {
+  if (username === database[0].username && password === database[0].password) {
+    alert(
+      newsfeed[0].timeline +
+        '\n' +
+        newsfeed[1].timeline +
+        '\n' +
+        newsfeed[2].timeline
+    )
+  } else {
+    alert('You entered an incorrect username and password.')
+  }
+}
+
+signIn(usernamePrompt, passwordPrompt)
