@@ -75,3 +75,11 @@ newArray.forEach((num, i) => {
 
 // BONUS: create a new list with all user information, but add "!" to the end of each items they own.
 // !!SEE CHALLENGE DIRECTLY ABOVE FOR HINT ON HOW TO DO THIS!!
+const itemsBangAdded = array.map(arrayItem => {
+  let { username, team, score, items } = arrayItem
+  let newItems = items.map(item => item + '!')
+  return { username, team, score, newItems }
+})
+// .map() NEEDS TO RETURN A VALUE!!
+
+console.log('itemsBangAdded', itemsBangAdded)
